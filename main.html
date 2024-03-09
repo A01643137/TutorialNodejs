@@ -15,7 +15,7 @@
   >
     <header class="bg-zinc-300 px-6 shadow">
       <div class="flex h-12 items-center justify-center space-x-8">
-        <a href="Tailwind" class="cursor-not-allowed"
+        <a href="Tailwind" class="cursor-not-allowed bg-no-repeat"
           ><svg
             class="size-28"
             height="308"
@@ -130,7 +130,7 @@
       </div>
     </header>
     <div
-      class="container mx-auto relative bg-center bg-fixed bg-cover rounded-2xl space-y-0"
+      class="container mx-auto relative bg-center bg-fixed bg-cover bg-no-repeat rounded-2xl space-y-0"
       style="
         background-image: url(&quot;img/NODE.jpeg&quot;);
         width: auto;
@@ -159,9 +159,6 @@
         API para aprovechar el código existente.
       </p>
     </div>
-    <div class="container mx-auto" style="background-image: url(&quot;&quot;)">
-      Aqui va la imagen del uso de GET y POST
-    </div>
     <div class="container mx-auto bg-slate-400 rounded-2xl">
       <h1 class="text-4xl font-bold mt-8">Solicitud GET:</h1>
       <p>
@@ -177,7 +174,7 @@
       </p>
     </div>
     <div
-      class="container mx-auto relative bg-center bg-fixed bg-cover p-0 rounded-2xl space-y-0"
+      class="container mx-auto relative bg-center bg-fixed bg-cover bg-no-repeat p-0 rounded-2xl space-y-0"
       style="
         background-image: url(&quot;img/spotify.png&quot;);
         width: auto;
@@ -187,14 +184,69 @@
     <div class="container mx-auto bg-slate-400 rounded-2xl space-y-0 p-0">
       <h1 class="text-4xl font-bold mt-8 text-center">Tutorial API Spotify</h1>
       <div
-        class="container mx-auto relative bg-center bg-fixed bg-cover p-0 rounded-2xl space-y-0"
+        class="container mx-auto relative p-0 space-y-0"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/Spotifylink.png&quot;);
+          width: auto;
+          height: 100px;
+        "
+      ></div>
+      <p>
+        Definimos las opciones para la solicitud, incluyendo el método POST, los
+        encabezados necesarios (tipo de contenido), y el cuerpo de la solicitud
+        que contiene las credenciales del cliente.
+      </p>
+      <div
+        class="container mx-auto relative bg-center bg-cover bg-no-repeat p-0 space-y-0"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/fetchSpotify.png&quot;);
+          width: auto;
+          height: 300px;
+        "
+      ></div>
+      <p>
+        Utilizamos fetch() para obtener el token de acceso de Spotify utilizando 
+        las credenciales proporcionadas.
+      </p>
+      <div
+        class="container mx-auto relative bg-center bg-cover bg-no-repeat p-0 space-y-0"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/tokenSpotify.png&quot;);
+          width: auto;
+          height: 300px;
+        "
+      ></div>
+      <p>
+        Utilizamos el token de acceso obtenido para realizar una solicitud GET a la 
+        API de Spotify y obtener información sobre el álbum.
+      </p>
+      <div
+        class="container mx-auto relative bg-center bg-cover bg-no-repeat p-0 space-y-0"
         style="
           background-image: url(&quot;img/tutorial-spotify2.png&quot;);
           width: auto;
           height: 300px;
         "
       ></div>
-      <p>Aqui va la explicacion</p>
+      <p>
+        Esta función toma una lista de álbumes, selecciona los primeros tres, y
+        muestra el nombre y la imagen de cada álbum en un contenedor HTML con el
+        id "resultado".
+      </p>
+      <p>
+        Obtiene una referencia al elemento HTML con el id "resultado" usando
+        document.getElementById("resultado") y la almacena en la variable
+        resultadoDiv.
+      </p>
+      <p>
+        Toma solo los primeros tres álbumes de la lista de álbumes usando
+        slice(0, 3) y los almacena en la variable albumsToShow.
+      </p>
+      <p>
+        Para cada álbum, crea un nuevo elemento "div" usando
+        document.createElement("div") y le añade la clase "album" con
+        classList.add("album").
+      </p>
       <h4 class="text-xl font-semibold font-serif">Pruebalo tu mismo!</h4>
       <input
         id="Album"
@@ -211,7 +263,7 @@
     </div>
 
     <div
-      class="container mx-auto relative bg-center bg-fixed bg-cover rounded-2xl space-y-0"
+      class="container mx-auto relative bg-center bg-fixed bg-cover bg-no-repeat rounded-2xl space-y-0"
       style="
         background-image: url(&quot;img/openai.png&quot;);
         width: auto;
@@ -222,12 +274,49 @@
       <h1 class="text-4xl font-bold mt-8 text-center">
         Tutorial API OpenAI(ChatGPT)
       </h1>
-      <a href="#">Imagen de Codigo</a>
-      <p>Aqui va la explicacion</p>
+      <div
+        class="container mx-auto relative bg-center p-0 space-y-0 bg-no-repeat"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/endpointAI.png&quot;);
+          width: auto;
+          height: 100px;
+        "
+      ></div>
+      <p>
+        Establecemos la URL del endpoint de la API de OpenAI para completar
+        conversaciones.
+      </p>
+      <div
+        class="container mx-auto relative p-0 space-y-0 bg-no-repeat"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/openAI_API.png&quot;);
+          width: auto;
+          height: 300px;
+        "
+      ></div>
+      <p>
+        Definimos las opciones para la solicitud, incluyendo el método POST, los
+        encabezados necesarios (tipo de contenido y autorización), y el cuerpo
+        de la solicitud que contiene el modelo de lenguaje y el mensaje del
+        usuario.
+      </p>
+      <div
+        class="container mx-auto relative p-0 space-y-0 bg-no-repeat"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/ResultadoOpenAI.png&quot;);
+          width: auto;
+          height: 300px;
+        "
+      ></div>
+      <p>
+        Utilizamos fetch() para enviar la solicitud a la API de OpenAI y obtener
+        una respuesta generada por IA.
+      </p>
+      <h4 class="text-xl font-semibold font-serif">Aquí está la respuesta de OpenAI sobre el artista que mencionaste</h4>
       <p id="resultado-openai" class="text-lg text-center font-serif"></p>
     </div>
     <div
-      class="container mx-auto relative bg-center bg-fixed bg-cover rounded-2xl space-y-0"
+      class="container mx-auto relative bg-fixed bg-cover bg-no-repeat rounded-2xl space-y-0"
       style="
         background-image: url(&quot;img/openweather.png&quot;);
         width: auto;
@@ -238,19 +327,47 @@
       <h1 class="text-4xl font-bold mt-8 text-center">
         Tutorial API OpenWeather
       </h1>
-      <a href="#">Imagen de Codigo</a>
-      <p>Aqui va la explicacion</p>
-      <input
-        type="text"
-        id="locationInput"
-        class="bg-slate-600 rounded-md text-white"
-      />
-      <button
-        onclick="getWeather()"
-        class="bg-blue-500 text-white px-4 py-2 rounded-md mt-2"
-      >
-        Obtener Clima
-      </button>
+      <div
+        class="container mx-auto relative p-0 space-y-0 bg-no-repeat"
+        style="
+          background-image: url(&quot;img/CapturasTutorial/APIweather.png&quot;);
+          width: auto;
+          height: 300px;
+        "
+      ></div>
+      <p>
+        En esta función, creamos un flujo de ejecución asíncrono que nos permite
+        realizar múltiples solicitudes a la API de OpenWeatherMap sin bloquear
+        la interfaz de usuario. 
+      </p>
+      <p>
+        Creamos una variable llamada weatherKey que contiene nuestra clave de API 
+        para acceder a los datos climáticos de OpenWeatherMap. Luego, obtenemos la 
+        ubicación que el usuario ha ingresado en el campo de entrada locationInput 
+        del documento HTML.
+      </p>
+      <p>
+        Usamos fetch() para enviar una solicitud a la API de OpenWeatherMap para 
+        geolocalización. Esto nos proporciona información sobre la ubicación, incluyendo 
+        la latitud y la longitud que necesitamos para obtener el clima.
+      </p>
+      <p>
+        Seleccionamos un elemento HTML con el ID "weatherResult" y lo actualizamos 
+        con la descripción del clima obtenida de la respuesta de la API.
+      </p>
+        <input
+          type="text"
+          id="locationInput"
+          class="bg-slate-600 rounded-md text-white"
+        />
+        <button
+          onclick="getWeather()"
+          class="bg-blue-500 text-white px-4 py-2 rounded-md mt-2"
+        >
+          Obtener Clima
+        </button>
+      </p>
+
       <p id="weatherResult" class="mt-4 text-center text-lg font-semibold"></p>
     </div>
   </body>
